@@ -6,14 +6,18 @@ public class Algo1 {
         
     
         do{
-            int[] FibArray = {0, 1};
-            System.out.print("Enter a positive number : ");
-            int num = scanner.nextInt();
-            scanner.nextLine();
-            if (num < 0) {
-                System.out.println("Please enter a valid number!");
-                break;
-            }
+            do{
+                int[] FibArray = {0, 1};
+                System.out.print("Enter a positive number : ");
+                int num = scanner.nextInt();
+                scanner.nextLine();
+                if (num < 0) {
+                    System.out.println("Please enter a valid number!");
+                    break;
+                }
+
+           
+            
 
             boolean exit = false;
             int z = 0;
@@ -57,9 +61,12 @@ public class Algo1 {
                 }
                  
                 System.out.print("Fibonacci series upto " + num + " is: " + series);
-                System.out.println();    
+                System.out.println();  
+
+                 
 
             }while (!exit);
+            }while(true); 
 
         }while(true);
 
