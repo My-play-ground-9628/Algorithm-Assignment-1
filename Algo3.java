@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Algo3 {
@@ -16,15 +17,19 @@ public class Algo3 {
         
             
         }
+        System.out.println(Arrays.toString(nums));
+        
         nums = numsNew;
-        System.out.print("Nums = [");
-        for (int k = 0; k < nums.length; k++) {
-            System.out.print(nums[k]+",");
+
+        System.out.println(Arrays.toString(nums));
+        
+        // System.out.print("Nums = [");
+        // for (int k = 0; k < nums.length; k++) {
+        //     System.out.print(nums[k]+",");
           
-        }
-        System.out.println("\b"+ "]");  
-        // System.out.println(nums);
-        // System.out.println(numsNew);
+        // }
+        // System.out.println("\b"+ "]");  
+        
 
     }
     
