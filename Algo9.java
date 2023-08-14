@@ -20,20 +20,24 @@ public class Algo9 {
 
                 
             }
-            
-            for (int j= 0; j < invert.length; j++) {
+            boolean palindrome = true;
+            do{
+                for (int j= 0; j < invert.length; j++) {
                 if (invert[j]!=textStr[j]) {
+                    System.out.println(text + " isn't a palindrome");
+                    palindrome = false;
                     break;
-                }else continue;
+                }
             
-                
+                if (j==invert.length-1){
+                    palindrome = false;
+                System.out.println(text + " is Palindrome");
+                }
+
             }
-            System.out.println();
-        
-
-
-
-        }while(true);
-    }
+            }while(palindrome);
     
+    
+    }while(true);
+}
 }
