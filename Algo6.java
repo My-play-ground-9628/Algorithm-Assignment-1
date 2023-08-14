@@ -6,6 +6,7 @@ public class Algo6 {
     private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         
+        loop:
         do {
             System.out.print("Enter a text: ");
             String text = scanner.nextLine();
@@ -15,13 +16,20 @@ public class Algo6 {
                 continue;
                 
             }
+            for (int i = 0; i < textStr.length; i++) {
+                if (textStr[i]>128) {
+                    System.out.println("Only ASCII characters are supported");
+                    continue loop;
+                }
+            }
+
             int wordCount = 1;
             for (int i = 0; i < textStr.length; i++) {
                 if (textStr[i]==' ') {
                     wordCount += 1;
                 }
             }
-            // System.out.println(wordCount);
+            
             ArrayList<String> words = new ArrayList<String>();
             int[] spaceIndex = new int[wordCount];
             spaceIndex[0] = 0;
@@ -42,13 +50,13 @@ public class Algo6 {
         for (int k = 0; k < spaceIndex.length; k++) {
                 if (k == spaceIndex.length-1) {
                     words.add(k,(text.substring(spaceIndex[k],text.length()).strip()));
-                    //System.out.print(text.substring(spaceIndex[k],text.length()).strip());
+                    
                     
             
                 }else {
                     words.add(k,(text.substring(spaceIndex[k],spaceIndex[k+1]).strip()));
                     
-                    //System.out.print(text.substring(spaceIndex[k],spaceIndex[k+1]).strip());
+                    
                 }       
              
             }
@@ -59,6 +67,7 @@ public class Algo6 {
         }   
             
             System.out.println();
+            break;
         }while(true);
         
 

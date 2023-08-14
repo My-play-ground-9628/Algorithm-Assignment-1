@@ -6,10 +6,16 @@ public class Algo8 {
         int[] numA = {5, 7, -2, 3, 4, 6, 7};
         int[] numB = {7, 8, -8, 2, 1, -9, 6};
 
-        int[] intersect = new int[];
+        System.out.print("numA \u2229 numB {");
         for (int i = 0; i < numB.length; i++) {
-            
+            for (int j = 0; j < numB.length; j++) {
+                if (numA[i]==numB[j]) {
+                    System.out.print(numA[i] + ", ");
+                }
+                
+            } 
         }
+        System.out.print("\b\b}\n");
         
     }
     
